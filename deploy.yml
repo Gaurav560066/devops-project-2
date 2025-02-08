@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-devops
+  labels:
+    app: deployment-devops
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deployment-devops
+  template:
+    metadata:
+      labels:
+        app: deployment-devops
+    spec:
+      containers:
+      - name: deployment-devops
+        image: dockerkumargaurav/devops-proj-2
+        ports:
+        - containerPort: 80
