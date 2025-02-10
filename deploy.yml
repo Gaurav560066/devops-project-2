@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-devops
+  name: deployment-ihub-iit-assignment-3
   labels:
-    app: deployment-devops
+    app: deployment-ihub-iit-assignment-3
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
-      app: deployment-devops
+      app: deployment-ihub-iit-assignment-3
   template:
     metadata:
       labels:
-        app: deployment-devops
+        app: deployment-ihub-iit-assignment-3
     spec:
       containers:
-      - name: deployment-devops
-        image: dockerkumargaurav/devops-proj-2
+      - name: deployment-ihub-iit-assignment-3
+        image: dockerkumargaurav/ihub-iit-assignment-3
         ports:
         - containerPort: 80
