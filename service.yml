@@ -8,5 +8,5 @@ spec:
     app: deployment-ihub-iit-assignment-3
   ports:
     - port: 80
-      targetPort: 8088
+      targetPort: 80
       nodePort: 30010
