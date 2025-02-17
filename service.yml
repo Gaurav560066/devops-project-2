@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: app-nodeport-svc
 spec:
   selector:
-    app: deployment-ihub-iit-assignment-3
+    app: nginx
+  type: NodePort
   ports:
-    - port: 80
-      targetPort: 30088
-
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+      nodePort: 30080
